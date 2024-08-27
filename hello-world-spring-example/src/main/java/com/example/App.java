@@ -1,8 +1,8 @@
-package com.example;
+package src.main.java.com.example;
 
-import com.example.model.Address;
-import com.example.model.City;
-import com.example.service.HelloService;
+import src.main.java.com.example.model.Address;
+import src.main.java.com.example.model.City;
+import src.main.java.com.example.service.HelloService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -17,8 +17,8 @@ public class App {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
-        //HelloService helloService = (HelloService) context.getBean("helloService");
-        HelloService helloService = context.getBean("helloService", HelloService.class);
+        HelloService helloService = (HelloService) context.getBean("helloService");
+        //HelloService helloService = context.getBean("helloService", HelloService.class);
 
         helloService.sayHello();
     }
