@@ -17,8 +17,8 @@ public class App {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
-        HelloService helloService = (HelloService) context.getBean("helloService");
-        //HelloService helloService = context.getBean("helloService", HelloService.class);
+       //HelloService helloService = (HelloService) context.getBean("helloService");
+       HelloService helloService = context.getBean("helloService", HelloService.class);
 
         helloService.sayHello();
     }
