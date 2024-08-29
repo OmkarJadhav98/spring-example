@@ -3,13 +3,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <bean id="helloService" class="com.example.service.HelloService">
+    <bean id="helloService" class="src.main.java.com.example.service.HelloService">
         <!-- property injection-->
         <property name="name" value="Amit"/>
         <property name="address" ref="address"/>
     </bean>
 
-    <bean id="address" class="com.example.model.Address">
+    <bean id="address" class="src.main.java.com.example.model.Address">
         <!-- constructor injection-->
         <constructor-arg ref="city"/>
         <!-- <property name="city" ref="city" />-->
@@ -19,7 +19,7 @@
     </bean>
 
     <!--    setter injection-->
-    <bean id="city" class="com.example.model.City">
+    <bean id="city" class="src.main.java.com.example.model.City">
         <property name="name" value="Pune"/>
         <!--<constructor-arg name="name" value="Pune"/>-->
     </bean>
