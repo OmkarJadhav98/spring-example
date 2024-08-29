@@ -1,6 +1,6 @@
-package com.example.service;
+package src.main.java.com.example.service;
 
-import com.example.model.Address;
+import src.main.java.com.example.model.Address;
 
 public class HelloService {
 
