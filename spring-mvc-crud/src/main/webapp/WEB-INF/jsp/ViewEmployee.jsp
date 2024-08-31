@@ -1,118 +1,82 @@
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Employees List</title>
+    <title>Employee List</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Merriweather:wght@700&display=swap');
-
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #fff;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            color: #333;
             margin: 0;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             height: 100vh;
-            overflow: hidden;
+            overflow: auto;
         }
 
         h1 {
-            align-self: flex-start;
             font-family: 'Merriweather', serif;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #d4af37;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        .table-container {
-            width: 80%;
-            position: relative;
+            color: #4a4a4a;
         }
 
         table {
-            width: 100%;
+            width: 80%;
+            margin: 20px auto;
             border-collapse: collapse;
-            margin: 0 auto;
-            background: rgba(22, 34, 51, 0.9);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        table:hover {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         th, td {
             padding: 15px;
             text-align: left;
-            color: #f0f0f0;
+            border-bottom: 1px solid #ddd;
         }
 
         th {
-            background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
-            font-weight: 600;
-            font-size: 1rem;
+            background-color: #f4f4f4;
         }
 
-        tr {
-            transition: background 0.3s ease-in-out;
-        }
-
-        tr:hover {
-            background: rgba(233, 69, 96, 0.2);
-        }
-
-        td {
-            font-size: 0.9rem;
-            border-bottom: 1px solid rgba(15, 52, 96, 0.6);
-        }
-
-        td:last-child, th:last-child {
-            text-align: center;
-        }
-
-        a {
+        td a {
+            color: #007bff;
             text-decoration: none;
-            color: #e94560;
-            transition: color 0.2s, transform 0.2s;
         }
 
-        a:hover {
-            color: #f0a500;
-            transform: scale(1.1);
+        td a:hover {
+            text-decoration: underline;
         }
 
-        .add-button {
-            position: absolute;
-            right: 0;
-            top: -60px;
+        .buttons-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .buttons-container input {
             padding: 12px 25px;
-            background: linear-gradient(135deg, #f0a500, #e94560);
-            color: #fff;
+            margin: 5px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
             border: none;
-            border-radius: 30px;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s;
         }
 
-        .add-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        .buttons-container input:hover {
+            background: linear-gradient(135deg, #0056b3, #004080);
+            transform: scale(1.05);
         }
 
         @media screen and (max-width: 768px) {
-            .table-container {
+            table {
                 width: 95%;
             }
 
@@ -121,12 +85,10 @@
             }
 
             th, td {
-                font-size: 0.8rem;
+                font-size: 0.9rem;
             }
 
-            .add-button {
-                width: 100%;
-                top: -40px;
+            .buttons-container input {
                 font-size: 0.9rem;
             }
         }
@@ -134,36 +96,38 @@
 </head>
 <body>
 
-<h1>Employees List</h1>
+<h1>Employee List</h1>
 
-<div class="table-container">
-    <table>
-        <thead>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Designation</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <c:forEach var="emp" items="${list}">
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Salary</th>
-                <th>Designation</th>
-                <th>Department</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <td><c:out value="${emp.id}"/></td>
+                <td><c:out value="${emp.name}"/></td>
+                <td><c:out value="${emp.salary}"/></td>
+                <td><c:out value="${emp.designation}"/></td>
+                <td><c:out value="${emp.department}"/></td>
+                <td>
+                    <a href="${pageContext.request.contextPath}/edit/${emp.id}">Edit</a>
+                    <a href="${pageContext.request.contextPath}/delete/${emp.id}" onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-            <c:forEach var="emp" items="${list}">
-                <tr>
-                    <td>${emp.id}</td>
-                    <td>${emp.name}</td>
-                    <td>${emp.salary}</td>
-                    <td>${emp.designation}</td>
-                    <td>${emp.department}</td>
-                    <td><a href="edit/${emp.id}">Edit</a></td>
-                    <td><a href="delete/${emp.id}">Delete</a></td>
-                </tr>
-            </c:forEach>
-        </tbody>
-    </table>
-    <input type="button" class="add-button" onclick="location.href='add';" value="Add New Employee" />
+        </c:forEach>
+    </tbody>
+</table>
+
+<div class="buttons-container">
+    <input type="button" onclick="location.href='${pageContext.request.contextPath}/add';" value="Add New Employee" />
 </div>
 
 </body>
