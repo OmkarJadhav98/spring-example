@@ -21,15 +21,16 @@ public class EmpDao {
                 "id INT AUTO_INCREMENT PRIMARY KEY, " +
                 "name VARCHAR(255) NOT NULL, " +
                 "salary DECIMAL(10, 2) NOT NULL, " +
-                "designation VARCHAR(255) NOT NULL)";
+                "designation VARCHAR(255) NOT NULL," +
+                "department VARCHAR(255))";
         template.execute(sql);
 
         String dataQueries = """
-                            INSERT INTO emp (name, salary, designation) VALUES ('avadhut', 10000.0, 'soft engg');
-                            INSERT INTO emp (name, salary, designation) VALUES ('test user', 7000.0, 'driver');
-                            INSERT INTO emp (name, salary, designation) VALUES ('second test user', 33000.0, 'mechanic');
-                            INSERT INTO emp (name, salary, designation) VALUES ('last user', 87643.0, 'painter');
-                """;
+                INSERT INTO emp (name, salary, designation, department) VALUES ('avadhut', 10000.0, 'soft engg', 'IT');
+                                INSERT INTO emp (name, salary, designation, department) VALUES ('test user', 7000.0, 'driver', 'Logistics');
+                                INSERT INTO emp (name, salary, designation, department) VALUES ('second test user', 33000.0, 'mechanic', 'Maintenance');
+                                INSERT INTO emp (name, salary, designation, department) VALUES ('last user', 87643.0, 'painter', 'Art');
+                   """;
         template.update(dataQueries);
     }
 
@@ -61,6 +62,7 @@ public class EmpDao {
                 e.setName(rs.getString(2));
                 e.setSalary(rs.getFloat(3));
                 e.setDesignation(rs.getString(4));
+                e.setDepartment(rs.getString(5));
                 return e;
             }
         });
