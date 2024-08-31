@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="808f3606-5df2-467c-8bb8-18ff9009f690" name="Changes" comment="Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-world-spring-example/src/main/java/com/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-world-spring-example/src/main/java/com/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-world-spring-example/src/main/java/com/example/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-world-spring-example/src/main/java/com/example/model/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-world-spring-example/src/main/java/com/example/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-world-spring-example/src/main/java/com/example/model/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-world-spring-example/src/main/java/com/example/service/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-world-spring-example/src/main/java/com/example/service/HelloService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-world-spring-example/src/main/resources/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hello-world-spring-example/src/main/resources/spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,14 +41,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.ide.FileNotInSourceRootChecker.no.check": "true",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "F:/_codeBase/java-examples",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\_codeBase\spring-examples\spring-mvc-crud\src\main\java\com\kodtodya\practice\bean" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -247,7 +248,127 @@
       <option name="project" value="LOCAL" />
       <updated>1724779163636</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911524679</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911524679</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911538157</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911538157</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911581427</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911581427</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911591981</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911591981</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911597034</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911597034</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911603845</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911603845</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911610759</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911610759</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911627183</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911627183</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911635807</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911635807</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911645902</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911645902</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911654708</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911654708</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911662950</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911662950</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911671463</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911671463</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911678995</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911678995</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1724911686504</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1724911686504</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
