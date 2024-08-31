@@ -5,42 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Management</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #34495e;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            background: url('https://source.unsplash.com/1600x900/?office,work') no-repeat center center fixed;
+            background-size: cover;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
+            color: #fff;
         }
 
         .container {
             text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 90%;
+            animation: fadeIn 1s ease-out;
         }
 
         h1 {
-            color: #2c3e50;
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: #f9f9f9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         a {
             display: block;
-            margin: 10px 0;
-            padding: 10px 20px;
+            margin: 15px 0;
+            padding: 15px 25px;
             text-decoration: none;
             color: #fff;
-            background-color: #3498db;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            background: linear-gradient(45deg, #ff6f61, #d500f9);
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
         a:hover {
-            background-color: #2c3e50;
+            background: linear-gradient(45deg, #d500f9, #ff6f61);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            a {
+                font-size: 1rem;
+                padding: 12px 22px;
+            }
         }
     </style>
 </head>
