@@ -53,6 +53,10 @@
             <td><form:input path="designation" /></td>
         </tr>
         <tr>
+            <td>Department:</td>
+            <td><form:input path="department"/></td>
+        </tr>
+        <tr>
             <td colspan="2" style="text-align:center;">
                 <input type="submit" value="Edit Save" />
             </td>
