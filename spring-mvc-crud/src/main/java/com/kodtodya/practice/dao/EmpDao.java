@@ -26,7 +26,7 @@ public class EmpDao {
         template.execute(sql);
 
         String dataQueries = """
-                INSERT INTO emp (name, salary, designation, department) VALUES ('avadhut', 10000.0, 'soft engg', 'IT');
+                                INSERT INTO emp (name, salary, designation, department) VALUES ('avadhut', 10000.0, 'soft engg', 'IT');
                                 INSERT INTO emp (name, salary, designation, department) VALUES ('test user', 7000.0, 'driver', 'Logistics');
                                 INSERT INTO emp (name, salary, designation, department) VALUES ('second test user', 33000.0, 'mechanic', 'Maintenance');
                                 INSERT INTO emp (name, salary, designation, department) VALUES ('last user', 87643.0, 'painter', 'Art');
@@ -35,12 +35,17 @@ public class EmpDao {
     }
 
     public int save(Emp p) {
-        String sql = "insert into emp(name,salary,designation) values('" + p.getName() + "'," + p.getSalary() + ",'" + p.getDesignation() + "')";
+        String sql = "insert into emp(name,salary,designation,department) values('"
+                + p.getName() + "'," + p.getSalary() + ",'"
+                + p.getDesignation() + "','" + p.getDepartment() + "')";
         return template.update(sql);
     }
 
     public int update(Emp p) {
-        String sql = "update emp set name='" + p.getName() + "', salary=" + p.getSalary() + ",designation='" + p.getDesignation() + "' where id=" + p.getId();
+        String sql = "update emp set name='" + p.getName() + "', salary="
+                + p.getSalary() + ", designation='" + p.getDesignation()
+                + "', department='" + p.getDepartment()
+                + "' where id=" + p.getId();
         return template.update(sql);
     }
 
