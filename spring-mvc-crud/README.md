@@ -1,13 +1,13 @@
 # Employee Management System
 
-Welcome to the **Employee Management System** project! 🎉 This application is designed to help manage employee records efficiently with a modern and user-friendly interface.
+Welcome to the **Employee Management System** project! 🎉 This application is designed to help manage employee records efficiently with a modern and user-friendly interface using `spring` operation.
 
 ## 🛠 Technologies Used
 
 - **Spring** - For building and running the Java application.
 - **JSP** - For rendering dynamic web pages.
 - **CSS** - For styling the web pages.
-- **MySQL** - For database management (if applicable).
+- **H2** - For database management (if applicable).
 - **Maven** - For project management and build automation.
 
 ## 📋 Features
@@ -22,13 +22,13 @@ Welcome to the **Employee Management System** project! 🎉 This application is 
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/employee-management-system.git
+    git clone https://github.com/OmkarJadhav98/spring-example.git
     ```
 
 2. **Navigate to the project directory:**
 
     ```bash
-    cd employee-management-system
+    cd spring-mvc-crud
     ```
 
 3. **Build the project with Maven:**
@@ -53,7 +53,7 @@ Welcome to the **Employee Management System** project! 🎉 This application is 
 
 ### Employee Management
 
-![Employee List](docs/screenshots/employee_management.png)
+![Employee Management](docs/screenshots/employee_management.png)
 
 ### Employee List
 
@@ -100,7 +100,7 @@ We welcome contributions! If you'd like to contribute, please follow these steps
 
 ## 📧 Contact
 
-For any questions or feedback, please reach out to [your-email@example.com](mailto:your-email@example.com).
+For any questions or feedback, please reach out to [objadhav28@gmail.com](mailto:objadhav28@gmail.com).
 
 ## 📝 License
 
