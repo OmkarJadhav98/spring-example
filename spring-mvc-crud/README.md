@@ -51,9 +51,13 @@ Welcome to the **Employee Management System** project! 🎉 This application is 
 
 ## 🖼️ Screenshots
 
+### Employee Management
+
+![Employee List](docs/screenshots/employee_management.png)
+
 ### Employee List
 
-![Employee List](Screenshot 2024-09-01 213240.png)
+![Employee List](docs/screenshots/employee_list.png)
 
 ### Add Employee
 
